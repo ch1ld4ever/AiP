@@ -7,7 +7,8 @@ def my_graph(x, a, b, c):
     '''
     return a*(2*x**4) + b*(x**2) + c
 
-
+# plt.xkcd()
+plt.style.use("seaborn-muted")
 a = -5; b = 200 ; c = 100
 legend = "y = {}*(2*x**4) + {}*(x**2) + {}".format(a, b, c)
 left = -100; right = 100; step = .1
@@ -15,12 +16,12 @@ left = -100; right = 100; step = .1
 data_x = np.arange(left, right, step)
 data_y = [my_graph(x, a, b, c) for x in data_x]    
 
-plt.plot(data_x, data_y)
+plt.plot(data_x, data_y, color = "#66CCFF")
 plt.title("График данной функции")
 plt.xlabel("Ось X")
 plt.ylabel("Ось Y")
 plt.legend([legend])
 plt.grid(True)
-plt.axhline()
-plt.axvline()
+plt.axhline(lw = 2, color = "#FF6699")
+plt.axvline(lw = 2, color = "#FF6699")
 plt.show()
