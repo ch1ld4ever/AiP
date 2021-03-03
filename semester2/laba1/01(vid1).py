@@ -4,7 +4,7 @@ import numpy as np
 plt.style.use("seaborn")
 
 x = np.linspace(-5 , 5, 100)
-y = 6.8*x**7 - 
+y = 6.8*x**7 - 500
 
 fig, ax = plt.subplots()
 
